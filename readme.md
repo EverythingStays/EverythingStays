@@ -1,5 +1,5 @@
 # EverythingStays
-## Immutable & Distributed NodeJS Modules
+## Immutable & Distributed NodeJS Modules With IPFS
 
 What if we could start distributing modules in a immutable and safe way?
 
@@ -139,7 +139,7 @@ Easy! Just add a `esDependencies` key in your `package.json`, listing a dependen
 
 ```
 "esDependencies": {
-  "lodash": "QmavS7Hh4xt71Ap7errH6PTzf3kV5kcTS6F5U9Ux7wuZU7"
+  "lodash": "QmdKuh7znkjc6tqr4ReMLw1hTAQkQTZf1Gfz4HA3KKD9Np"
 }
 ```
 
@@ -152,7 +152,7 @@ NOTE: In the future, it will work something like this instead:
 
 and now it's been added to `node_modules` and in your `package.json` for future `npm install` needs.
 
-To show you a real example, I've added lodash 4.6.1 to IPFS and I'm seeding it from an instance. To install it, you run: `es save lodash@QmavS7Hh4xt71Ap7errH6PTzf3kV5kcTS6F5U9Ux7wuZU7`
+To show you a real example, I've added lodash 4.6.1 to IPFS and I'm seeding it from an instance. To install it, you run: `es save lodash@QmdKuh7znkjc6tqr4ReMLw1hTAQkQTZf1Gfz4HA3KKD9Np`
 
 To good to be true? Almost.
 
