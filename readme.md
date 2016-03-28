@@ -13,12 +13,13 @@ NOTE: Currently, this is just a draft but feel free to leave input (https://gith
 
 ## Introduction
 
-The last few days have been chaotic for the NodeJS/NPM ecosystem. One companies
-centralized registry removed the ability for many to install dependencies. We
-don't think this is any good.
+There has been a lot of hard work making NPM work as well as it's working today. I will be forever grateful to the community and also NPM Inc to have taking it this far.
+
+However, with more of todays application depending on a single-point for getting their dependencies, we are starting to realize more ways it can break.
 
 We set out to solve the problems that we saw and we just got something working.
-We would love your feedback on this, and work together to create a better NodeJS ecosystem.
+
+We would love your feedback on this, and work together to create a better NodeJS ecosystem for everyone
 
 NOTE: If you're just interested in seeing the technical solution, skip all this
 and go to [How we can do it](#how-we-can-do-it)
@@ -34,8 +35,6 @@ and go to [How we can do it](#how-we-can-do-it)
 * Forced to always be online to install modules
 * Always use company-provided CDN's (while it's possible, it shouldn't be the only way)
 * Always fetching remote when it exists in LAN or local
-
-Let's solve these issues, one at a time.
 
 ### How can we fix these issues?
 
