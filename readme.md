@@ -1,8 +1,6 @@
 # EverythingStays
 ## Immutable & Distributed NodeJS Modules
 
-![Distributed Network](distributed.jpg)
-
 What if we could start distributing modules in a immutable and safe way?
 
 Well, we can, we just have to change the install and publish process a bit.
