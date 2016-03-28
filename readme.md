@@ -113,7 +113,7 @@ The IPFS install steps are the following:
 * Now you should have IPFS setup correctly, then run:
 * `ipfs daemon --init` and wait for `Daemon is ready` to show up
 * Now do `ipfs cat /ipfs/QmYwAPJzv5CZsnA625s3Xf2nemtYgPpHdWEz79ojWnPbdG/about` and you should see information about IPFS
-* The only thing is missing is the everythingstays-cli, install it with `npm install -g everythingstays-cli`
+* The only thing missing is the everythingstays-cli, install it with `npm install -g everythingstays-cli`
 
 Done! Now we're ready for installing and publishing modules!
 
