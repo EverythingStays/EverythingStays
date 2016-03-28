@@ -13,6 +13,7 @@ if git diff-index --quiet HEAD --; then
   echo "Generating index.html"
   cp template.html $PUBLIC_FOLDER/index.html
   perl -pe 's/MARKDOWN/`cat readme.html.tmp`/ge' -i $PUBLIC_FOLDER/index.html
+  perl -pe 's/VERSION/`git rev-parse HEAD`/ge' -i $PUBLIC_FOLDER/index.html
 
   HASH=$(ipfs add -r $PUBLIC_FOLDER | tail -n 1 | cut -d ' ' -f 2)
   ADDRESS=/ipfs/$HASH
