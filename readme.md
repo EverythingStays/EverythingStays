@@ -135,13 +135,24 @@ A key called `esDependencies` is used in your `package.json` to declare the IPFS
 
 So now we published a module, how we install our newly published module?
 
-Easy! Just do
+Easy! Just add a `esDependencies` key in your `package.json`, listing a dependency like this:
+
+```
+"esDependencies": {
+  "lodash": "QmavS7Hh4xt71Ap7errH6PTzf3kV5kcTS6F5U9Ux7wuZU7"
+}
+```
+
+And after that, run `npm install` and the module have been installed!
+
+
+NOTE: In the future, it will work something like this instead:
 
 `es save $MODULE_NAME@$IPFS_HASH`
 
 and now it's been added to `node_modules` and in your `package.json` for future `npm install` needs.
 
-To show you a real example, I've added lodash 4.6.1 to IPFS and I'm seeding it from an instance. To install it, you run: `es save lodash@QmavS7Hh4xt71Ap7errH6PTzf3kV5kcTS6F5U9Ux7wuZU7 `
+To show you a real example, I've added lodash 4.6.1 to IPFS and I'm seeding it from an instance. To install it, you run: `es save lodash@QmavS7Hh4xt71Ap7errH6PTzf3kV5kcTS6F5U9Ux7wuZU7`
 
 To good to be true? Almost.
 
