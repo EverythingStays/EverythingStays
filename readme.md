@@ -7,7 +7,7 @@ What if we could start distributing modules in a immutable and safe way?
 
 Well, we can, we just have to change the install and publish process a bit.
 
-<iframe src="http://ghbtns.com/github-btn.html?user=EverythingStays&amp;repo=EverythingStays&amp;type=watch&amp;count=true" allowtransparency="true" scrolling="0" frameborder="0" height="20" width="100"></iframe> <a href="https://twitter.com/share" class="twitter-share-button" data-text="Let's solve the #nodejs ecosystem and use immutable #npm packages!">Tweet</a>
+<iframe src="http://ghbtns.com/github-btn.html?user=EverythingStays&amp;repo=EverythingStays&amp;type=watch&amp;count=true" allowtransparency="true" scrolling="0" frameborder="0" height="20" width="100"></iframe> <a href="https://twitter.com/share" class="twitter-share-button" data-text="Let's improve the #nodejs ecosystem and use immutable #npm packages!">Tweet</a>
 
 NOTE: Currently, this is just a draft but feel free to leave input
 
@@ -170,7 +170,7 @@ So what I want from you?
 
 Thanks for reading all this. I hope you have some ideas about how to fix these issues, or feel excited about creating a better NodeJS ecosystem. I know I am.
 
-<iframe src="http://ghbtns.com/github-btn.html?user=EverythingStays&amp;repo=EverythingStays&amp;type=watch&amp;count=true" allowtransparency="true" scrolling="0" frameborder="0" height="20" width="100"></iframe> <a href="https://twitter.com/share" class="twitter-share-button" data-text="Let's solve the #nodejs ecosystem and use immutable #npm packages!">Tweet</a>
+<iframe src="http://ghbtns.com/github-btn.html?user=EverythingStays&amp;repo=EverythingStays&amp;type=watch&amp;count=true" allowtransparency="true" scrolling="0" frameborder="0" height="20" width="100"></iframe> <a href="https://twitter.com/share" class="twitter-share-button" data-text="Let's improve the #nodejs ecosystem and use immutable #npm packages!">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 ----------------------
