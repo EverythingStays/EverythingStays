@@ -53,7 +53,8 @@ a {
 }
 
 #wrapper {
-  width: 860px;
+  max-width: 860px;
+  min-width: 300px;
   padding: 20px;
   margin: 30px auto;
   background-color: white;
