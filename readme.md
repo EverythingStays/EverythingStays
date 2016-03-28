@@ -11,23 +11,27 @@ NOTE: Currently, this is just a draft but feel free to leave input (https://gith
 
 ## Introduction
 
-During these last few days, the negative parts of having NPM being centralized with one company has been exposed to the light.
+The last few days have been chaotic for the NodeJS/NPM ecosystem. One companies
+centralized registry removed the ability for many to install dependencies. We
+don't think this is any good.
 
-We set out to solve the problems that we saw, and we'd love your feedback and work to create a better module ecosystem for NodeJS
+We set out to solve the problems that we saw and we just got something working.
+We would love your feedback on this, and work together to create a better NodeJS ecosystem.
 
-NOTE: If you're just interested in seeing the technical solution, skip all this mumbo-jumbo and go directly to [How we can do it](#how-we-can-do-it)
+NOTE: If you're just interested in seeing the technical solution, skip all this
+and go to [How we can do it](#how-we-can-do-it)
 
 ### Problems trying to solve
 
-* No to reinventing the wheel 100%, reuse existing technologies
-* No to mutable modules
-* No to be able to remove modules
-* No to applications changing because of a new version of module was published
-* No to centralization. There should be no organization owning modules and their names
-* No to be involved in politics. The technology should be free from politics
-* No to always-online to install modules
-* No to always use company-provided CDN's (while it's possible, it shouldn't be the only way)
-* No to always fetching remote when it exists locally or in LAN
+* Reinventing the wheel, not reusing existing technologies
+* Having mutable modules
+* Able to remove modules
+* New published version of dependency breaking your application
+* Centralization. There should be no organization owning modules and their names
+* Involvement in politics. The technology should be free from politics
+* Forced to always be online to install modules
+* Always use company-provided CDN's (while it's possible, it shouldn't be the only way)
+* Always fetching remote when it exists in LAN or local
 
 Let's solve these issues, one at a time.
 
@@ -51,7 +55,7 @@ Modules should not be deletable. Instead, a module should live on, for as long a
 
 More popular modules will be seeded by more people, making it faster to download.
 
-#### Applications changing from dependencies
+#### New published version of dependency breaking your application
 
 Many popular modules broke because of a dependency was removed. Then a new version of the same module was published and everyone automatically started using that module. This is bad, because it's centralized and we just had luck that it was a good actor that choose to publish a proper module.
 
