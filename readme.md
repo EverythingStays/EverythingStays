@@ -7,6 +7,8 @@ Well, we can, we just have to change the install and publish process a bit.
 
 <iframe src="http://ghbtns.com/github-btn.html?user=EverythingStays&amp;repo=EverythingStays&amp;type=watch&amp;count=true" allowtransparency="true" scrolling="0" frameborder="0" height="20" width="100"></iframe> <a href="https://twitter.com/share" class="twitter-share-button" data-text="Let's improve the #nodejs ecosystem and use immutable #npm packages!">Tweet</a>
 
+[Chat at Freenode > #everythingstays](http://webchat.freenode.net/?randomnick=1&channels=%23everythingstays&uio=MTA9dHJ1ZSYxMT03Mg57)
+
 NOTE: Currently, this is just a draft but feel free to leave input (https://github.com/EverythingStays/EverythingStays/issues/new)
 
 ## Introduction
@@ -171,6 +173,8 @@ Thanks for reading all this. We hope you have some ideas about how to fix these 
 
 <iframe src="http://ghbtns.com/github-btn.html?user=EverythingStays&amp;repo=EverythingStays&amp;type=watch&amp;count=true" allowtransparency="true" scrolling="0" frameborder="0" height="20" width="100"></iframe> <a href="https://twitter.com/share" class="twitter-share-button" data-text="Let's improve the #nodejs ecosystem and use immutable #npm packages!">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+[Chat at Freenode > #everythingstays](http://webchat.freenode.net/?randomnick=1&channels=%23everythingstays&uio=MTA9dHJ1ZSYxMT03Mg57)
 
 ----------------------
 
