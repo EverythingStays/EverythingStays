@@ -1,11 +1,16 @@
 # EverythingStays
+
+NOTE: Previously, this repository hosted the website, this is no longer the case.
+
+Please see [everythingstays/stay-website](https://github.com/EverythingStays/stay-website) if you're interested in the source code for the website.
+
+![Demonstration](demonstration.gif)
+
 ## Immutable & Distributed NodeJS Modules With IPFS
 
 What if we could start distributing modules in a immutable and safe way?
 
 Well, we can, we just have to change the install and publish process a bit.
-
-<iframe src="http://ghbtns.com/github-btn.html?user=EverythingStays&amp;repo=EverythingStays&amp;type=watch&amp;count=true" allowtransparency="true" scrolling="0" frameborder="0" height="20" width="100"></iframe> <a href="https://twitter.com/share" class="twitter-share-button" data-text="Let's improve the #nodejs ecosystem and use immutable #npm packages!">Tweet</a>
 
 [Chat at Freenode > #everythingstays](http://webchat.freenode.net/?randomnick=1&channels=%23everythingstays&uio=MTA9dHJ1ZSYxMT03Mg57)
 
@@ -169,9 +174,6 @@ So what we want from you?
 * (PS, I, Victor, will provide private bandwidth for seeding your module if you want, so feel free to email me at victorbjelkholm+es@gmail.com and I'll start seeding your module directly.)
 
 Thanks for reading all this. We hope you have some ideas about how to fix these issues, or feel excited about creating a better NodeJS ecosystem. We know we are.
-
-<iframe src="http://ghbtns.com/github-btn.html?user=EverythingStays&amp;repo=EverythingStays&amp;type=watch&amp;count=true" allowtransparency="true" scrolling="0" frameborder="0" height="20" width="100"></iframe> <a href="https://twitter.com/share" class="twitter-share-button" data-text="Let's improve the #nodejs ecosystem and use immutable #npm packages!">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 [Chat at Freenode > #everythingstays](http://webchat.freenode.net/?randomnick=1&channels=%23everythingstays&uio=MTA9dHJ1ZSYxMT03Mg57)
 
