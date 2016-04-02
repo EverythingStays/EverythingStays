@@ -14,20 +14,17 @@ Well, we can, we just have to change the install and publish process a bit.
 
 [Chat at Freenode > #everythingstays](http://webchat.freenode.net/?randomnick=1&channels=%23everythingstays&uio=MTA9dHJ1ZSYxMT03Mg57)
 
-NOTE: Currently, this is just a draft but feel free to leave input (https://github.com/EverythingStays/EverythingStays/issues/new)
-
 ## Introduction
 
 There has been a lot of hard work making NPM work as well as it's working today. I will be forever grateful to the community and also NPM Inc to have taking it this far.
 
 However, with more of todays application depending on a single-point for getting their dependencies, we are starting to realize more ways it can break.
 
-We set out to solve the problems that we saw and we just got something working.
+EverythingStays was created with the goal of solving the problems that we saw with the current ecosystem.
 
 We would love your feedback on this, and work together to create a better NodeJS ecosystem for everyone
 
-NOTE: If you're just interested in seeing the technical solution, skip all this
-and go to [How we can do it](#how-we-can-do-it)
+If you would like to see and use the tool itself (stay-cli), check out the website instead: [http://everythingstays.com](http://everythingstays.com)
 
 ### Problems trying to solve
 
@@ -38,7 +35,7 @@ and go to [How we can do it](#how-we-can-do-it)
 * Centralization. There should be no organization owning modules and their names
 * Involvement in politics. The technology should be free from politics
 * Forced to always be online to install modules
-* Always use company-provided CDN's (while it's possible, it shouldn't be the only way)
+* Always use company-provided CDN's (while it should be possible, it shouldn't be the only way)
 * Always fetching remote when it exists in LAN or local
 
 ### How can we fix these issues?
@@ -49,13 +46,13 @@ Longer version:
 
 #### Do not re-invent the wheel
 
-The proposed solution is using the filesystem support of the NPM cli (and ied + pnpm is supported too).
+The proposed solution is using the scripts support of the NPM cli (and ied + pnpm is supported too).
 
-The only thing we have to change is our process, which is a difficult part but possible if we really care and engage ourselves in this.
+The only thing we have to change is our process, which is a difficult part but possible if we really care and engage ourselves in making it better.
 
 #### Immutable modules
 
-Today, the fate of a module is decided by NPM the company, and they are not afraid of deleting your module and letting someone else have it.
+Today, the fate of a module is decided by NPM the company and the package author. This is not good for you when you depend on them.
 
 Modules should not be deletable. Instead, a module should live on, for as long as people are seeding the module and using it.
 
@@ -63,7 +60,7 @@ More popular modules will be seeded by more people, making it faster to download
 
 #### New published version of dependency breaking your application
 
-Many popular modules broke because of a dependency was removed. Then a new version of the same module was published and everyone automatically started using that module. This is bad, because it's centralized and we just had luck that it was a good actor that choose to publish a proper module.
+Many popular modules broke because of a dependency was removed recently. Then a new version of the same module was published and everyone automatically started using that module. This is bad, because it's centralized and we just had luck that it was a good actor that choose to publish a proper module.
 
 Next time, that might not be the case.
 
@@ -71,7 +68,7 @@ Next time, that might not be the case.
 
 Modules should not be controlled by one entity, that decides the fate of the module.
 
-Modules should be owned by everyone. If we have a distributed network of modules, we can solve a lot of these issues.
+Modules should be owned by the community. If we have a distributed network of modules, we can solve a lot of these issues.
 
 Using a distributed network makes downloads faster, more efficient, safer and more democratic.
 
@@ -79,9 +76,9 @@ Using a distributed network makes downloads faster, more efficient, safer and mo
 
 Let's focus on code sharing, not on who get what name. That is not interesting.
 
-If we focus on building a network of packages that are immutable, and hosted by everyone ala Bittorrent, we can avoid 100% of the politics.
+If we focus on building a network of packages that are immutable, and hosted by everyone ala Bittorrent, we can avoid most if not all of the politics.
 
-With that said, if you are sharing copyright-protected content or other illegal content in your country, you are responsible for that.
+With that said, if you are sharing copyright-protected content or other illegal content in your country, you are responsible for the consequences.
 
 #### Offline first approach
 
@@ -117,7 +114,7 @@ The IPFS install steps are the following:
 * Now you should have IPFS setup correctly, then run:
 * `ipfs daemon --init` and wait for `Daemon is ready` to show up
 * Now do `ipfs cat /ipfs/QmYwAPJzv5CZsnA625s3Xf2nemtYgPpHdWEz79ojWnPbdG/about` and you should see information about IPFS
-* The only thing missing is the everythingstays-cli, install it with `npm install -g everythingstays-cli`
+* The only thing missing is the stay-cli, install it with `npm install -g stay-cli`
 
 Done! Now we're ready for installing and publishing modules!
 
@@ -125,11 +122,11 @@ NOTE: When you are publishing/installing modules, you will need to run `ipfs dae
 
 ### Publishing modules
 
-To publish modules, simply run `es install` in your repository to install the script hooks.
+To publish modules, first run `stay init` in your repository to install the prepublish script hook.
 
-Now when you run `npm publish`, you'll get a hash from IPFS before publishing to the actual registry. That hash you can use to specify the version to download.
+Now when you run `npm publish`, you'll get a hash from stay-cli before publishing to the actual registry. That hash you can use to specify the version to download.
 
-We have some plans for a distributed repository of modules, but for now, include it with the description of your tags or in your package.json for example.
+We have some plans for a distributed repository of modules, but for now, include it with the description of your signed tags.
 
 NOTE: The package will only be available for as long as you are running `ipfs daemon`. If you want to be able to share it from after that, you will need other peers in IPFS to have it and seed it for you. It can be a good idea for you to setup a quick instance in AWS or DigitalOcean with IPFS, and run `ipfs pin add $MODULE_HASH` there to share it from your own instance.
 
@@ -141,7 +138,9 @@ A key called `esDependencies` is used in your `package.json` to declare the IPFS
 
 So now we published a module, how we install our newly published module?
 
-Easy! Just add a `esDependencies` key in your `package.json`, listing a dependency like this:
+Easy! Just run `stay add name@hash` and stay-cli will add the dependency into `esDependencies` for you!
+
+It will look something like this:
 
 ```
 "esDependencies": {
@@ -149,16 +148,9 @@ Easy! Just add a `esDependencies` key in your `package.json`, listing a dependen
 }
 ```
 
-And after that, run `npm install` and the module have been installed!
+And after that, run `stay install` and the module have been installed!
 
-
-NOTE: In the future, it will work something like this instead:
-
-`es save $MODULE_NAME@$IPFS_HASH`
-
-and now it's been added to `node_modules` and in your `package.json` for future `npm install` needs.
-
-To show you a real example, I've added lodash 4.6.1 to IPFS and I'm seeding it from an instance. To install it, you run: `es save lodash@QmdKuh7znkjc6tqr4ReMLw1hTAQkQTZf1Gfz4HA3KKD9Np`
+To show you a real example, I've added lodash 4.6.1 to IPFS and I'm seeding it from a instance. To install it, you run: `stay add lodash@QmdKuh7znkjc6tqr4ReMLw1hTAQkQTZf1Gfz4HA3KKD9Np`
 
 To good to be true? Almost.
 
@@ -176,7 +168,3 @@ So what we want from you?
 Thanks for reading all this. We hope you have some ideas about how to fix these issues, or feel excited about creating a better NodeJS ecosystem. We know we are.
 
 [Chat at Freenode > #everythingstays](http://webchat.freenode.net/?randomnick=1&channels=%23everythingstays&uio=MTA9dHJ1ZSYxMT03Mg57)
-
-----------------------
-
-http://everythingstays.com - https://github.com/EverythingStays
